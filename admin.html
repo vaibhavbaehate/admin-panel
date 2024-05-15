@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin panal</title>
+    <!--website logo  -->
+    <link rel="icon" type="image/x-icon" href="/img/education-logo-on-letter-v-260nw-2402899325.webp">
+
+    <!-- fafaicon link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap css  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-navigaction " id="navbar">
+        <a class="navbar-brand" href="index.html"></a><button class="btn btn-link btn-sm order-1 order-md-0"
+            id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+
+
+        <div class="desboard">
+            <h3>Dashboard</h3>
+        </div>
+        <form class=" dashboard d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control  border-form" type="text" placeholder="Search for..." aria-label="Search"
+                    aria-describedby="basic-addon2" />
+                <div class="input-group-append">
+                    <button class="btn btn-desboard mt-2" type="button">
+                        <i class="fa fa-search" aria-hidden="true"></i> </button>
+                </div>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <div class="mode mr-3">
+            <span class="change"><i class="fas fa-moon"></i></span>
+        </div>
+        <!-- HTML Structure -->
+        <div class="notification-container">
+            <!-- Notification Icon -->
+            <div class="bill-icon">
+                <img src="/img/Group 79.png" alt="Notification Icon">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99
+                    <span class="visually-hidden">unread messages</span>
+            </div>
+            <!-- Notification Dropdown -->
+            <div class="notification-dropdown">
+                <ul>
+                    <!-- Notification Items -->
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 1</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 2</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 3</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 4</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 5</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 6</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 6</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 6</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 6</li>
+                    <li class="ml-2"><i class="fas fa-bell"></i> Notification 6</li>
+                    <!-- Add more notification items as needed -->
+                </ul>
+
+                <div class="notification-mark">
+                    <h6 class="text-secondary text-center">Mark As Read</h6>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark " id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="navbar-brand" href="index.html"><img src="/img/Logo.png" alt=""></a>
+                        <a class="nav-link mt-3 active" href="#">
+                            <div class="sb-nav-link-icon "><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><img src="./img/note.svg" alt=""></div>
+                            Appointment
+                            <div class="sb-sidenav-collapse-arrow"></div>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><img src="./img/Medical Kit.svg" alt=""></div>
+                            Doctor
+                            <div class="sb-sidenav-collapse-arrow"></div>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><img src="./img/people.svg" alt=""></div>
+                            Patient
+                            <div class="sb-sidenav-collapse-arrow"></div>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><img src="./img/chart-2.svg" alt=""></div>
+                            Report
+                            <div class="sb-sidenav-collapse-arrow"></div>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><img src="./img/setting-2.svg" alt=""></div>
+                            Setting
+                            <div class="sb-sidenav-collapse-arrow"></div>
+                        </a>
+
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><img src="./img/login.svg" alt=""></div>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="main-Dashboard">
+                    <div class="container-fluid pt-5">
+                        <div class="row ">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card">
+                                    <div class="icon-card">
+                                        <div class="icon-card-bg">
+                                            <i class="fas fa-wallet"></i>
+                                        </div>
+                                        <div class="icon-text">
+                                            <p>Earnings</p>
+                                        </div>
+                                        <div class="icon-arrow">
+                                            <h4>$23,425</h4>
+                                            <div class="icon-down">
+
+                                                <i class="fas fa-sort-up"></i>
+                                                <p class="pl-2">+ 201</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card">
+                                    <div class="icon-card">
+                                        <div class="icon-card-bg-2">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="icon-text">
+                                            <p>Earnings</p>
+                                        </div>
+                                        <div class="icon-arrow">
+                                            <h4>$23,425</h4>
+                                            <div class="icon-down">
+
+                                                <i class="fas fa-sort-up"></i>
+                                                <p class="pl-2">+ 201</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card">
+                                    <div class="icon-card">
+                                        <div class="icon-card-bg-3">
+                                            <i class="fab fa-wpbeginner"></i>
+                                        </div>
+                                        <div class="icon-text">
+                                            <p>Earnings</p>
+                                        </div>
+                                        <div class="icon-arrow">
+                                            <h4>$23,425</h4>
+                                            <div class="icon-down">
+
+                                                <i class="fas fa-sort-up"></i>
+                                                <p class="pl-2">+ 201</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card">
+                                    <div class="icon-card">
+                                        <div class="icon-card-bg">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <div class="icon-text">
+                                            <p>Earnings</p>
+                                        </div>
+                                        <div class="icon-arrow">
+                                            <h4>$23,425</h4>
+                                            <div class="icon-down">
+
+                                                <i class="fas fa-sort-up"></i>
+                                                <p class="pl-2">+ 201</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card1 mb-4 mt-5">
+                                    <div class="short-Patient">
+                                        <h5>Patient Visit</h5>
+                                        <div class="short">
+                                            <p>Sort by</p>
+                                        </div>
+                                        <select id="sortSelect">
+                                            <option value="default">Monthly</option>
+                                            <option value="ascending">Weekly</option>
+                                            <option value="descending">Days</option>
+                                        </select>
+                                    </div>
+                                    <canvas id="myChart" class="mt-3"></canvas>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card2 mb-4 mt-5">
+                                    <canvas id="myPieChart"></canvas>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table_custom table  table-hover ">
+                                <div class="table-text">
+                                    <h6>Patient Data</h6>
+                                    <img src="/img/more.svg" alt="">
+                                </div>
+                                <thead>
+                                    <tr>
+                                        <th>Check User</th>
+
+                                        <th>Patient name</th>
+                                        <th>Date In</th>
+                                        <th>Symptoms</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" name="patient" value="John Doe"></td>
+
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>
+                                            <div class="table-icon">
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                                                        src="/img/edit-2.svg" alt=""></a>
+                                                <!-- Button trigger modal -->
+
+
+                                                <!-- Modal -->
+
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
+                                                        src="/img/trash.svg" alt=""></a>
+
+
+                                                <!-- Modal -->
+
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="patient" value="John Doe"></td>
+
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>63</td>
+                                        <td>
+                                            <div class="table-icon">
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                                                        src="/img/edit-2.svg" alt=""></a>
+                                                <!-- Button trigger modal -->
+
+
+                                                <!-- Modal -->
+
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
+                                                        src="/img/trash.svg" alt=""></a>
+
+
+                                                <!-- Modal -->
+
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="patient" value="John Doe"></td>
+
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>66</td>
+                                        <td>
+                                            <div class="table-icon">
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                                                        src="/img/edit-2.svg" alt=""></a>
+                                                <!-- Button trigger modal -->
+
+
+                                                <!-- Modal -->
+
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
+                                                        src="/img/trash.svg" alt=""></a>
+
+
+                                                <!-- Modal -->
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="patient" value="John Doe"></td>
+
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>62</td>
+                                        <td>
+                                            <div class="table-icon">
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                                                        src="/img/edit-2.svg" alt=""></a>
+                                                <!-- Button trigger modal -->
+
+
+                                                <!-- Modal -->
+
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
+                                                        src="/img/trash.svg" alt=""></a>
+
+
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+            <!-- <footer class="py-4 bg-light mt-auto ">
+            <div class="container-fluid mt-3">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Website 2019</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/datatables-demo.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
